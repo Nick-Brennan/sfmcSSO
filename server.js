@@ -28,12 +28,13 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-  console.log(req.body);
   
   var encodedJWT = req.body.jwt;
+  console.log(encodedJWT);
   var secret = "va7UXl8Zgfc2PfSNYDLgJ08Z";
   var decodedJWT = jwt.decode(encodedJWT, secret); 
-  res.send(decodedJWT);
+  // res.send(decodedJWT);
+  res.sendStatus(200);
 });
 
 http.listen(process.env.PORT || 3000, function(){
