@@ -31,7 +31,7 @@ app.post('/', function(req, res){
   
   var encodedJWT = req.body.jwt;
   console.log(encodedJWT);
-  var secret = "va7UXl8Zgfc2PfSNYDLgJ08Z";
+  var secret = "frgome21hqhxumhcesuupjnrfz2ban0br0u4eqmnnxgggdkzlod2v4tnz5q2ovbx5wlzayz2smqgtoiqfnk0nn3rqnkrokjqqxw52a4f4dm1ipgjrdi0l3hh1labjzayodcxa55ss0qurvxo4whsecpguu1bcfe2v00cygwicwix035hytiqns0rg43wa5p0ustd1yl1lo0dbo5c5ziwbmcgr5hxaubgd1m1oakr0w4lyqkubiuzykrlzolujam";
   var decodedJWT = jwt.decode(encodedJWT, secret); 
   // res.send(decodedJWT);
   res.sendStatus(200);
