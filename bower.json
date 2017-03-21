@@ -1,0 +1,17 @@
+{
+  "name": "ps_node_template",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Nick-Brennan <nick_p_b@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
