@@ -24,7 +24,7 @@ app.get('/', function(req, res){
   if(req.cookies.jwt){
     res.render('index', {test: "hello world"});
   }else{
-    res.sendStatus(404);
+    res.sendStatus(401);
   }
   
 });
@@ -38,7 +38,7 @@ app.post('/', function(req, res){
     res.cookie('token', req.body.jwt)
     res.render('index', {test: JSON.stringify(decodedJWT)});
   }else{
-    res.sendStatus(404);
+    res.sendStatus(401);
   }
 });
 
