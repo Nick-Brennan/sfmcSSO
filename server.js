@@ -11,6 +11,11 @@ var express = require('express'),
 /*********|| I haven't included a view engine ||*************
 *******|| to use EJS first npm install -s ejs ||*************
 *************|| then uncomment below ||*********************/
+var jwt = require('jwt-simple');
+
+
+
+var decodedJWT = jwt.decode(encodedJWT, sec
 
 app.set('view engine', 'ejs');
 
@@ -28,7 +33,11 @@ app.get('/', function(req, res){
 
 app.post('/', function(req, res){
   console.log(req.body);
-  res.sendStatus(200);
+  
+  var encodedJWT = req.body.jwt;
+  var secret = "va7UXl8Zgfc2PfSNYDLgJ08Z";
+  var decodedJWT = jwt.decode(encodedJWT, secret); 
+  res.send(decodedJWT);
 });
 
 http.listen(process.env.PORT || 3000, function(){
