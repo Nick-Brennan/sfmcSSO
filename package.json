@@ -1,5 +1,5 @@
 {
-  "name": "ps_node_template",
+  "name": "nodePlay",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,6 +9,7 @@
     "ejs": "^2.5.6",
     "express": "^4.14.0",
     "init": "^0.1.2",
+    "jwt-simple": "^0.5.1",
     "mongoose": "^4.6.0",
     "request": "^2.74.0"
   },
