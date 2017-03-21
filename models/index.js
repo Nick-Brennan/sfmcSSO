@@ -1,12 +1,12 @@
 
-var mongoose = require("mongoose");
+//var mongoose = require("mongoose");
 
 //if using MONGOLAB
-mongoose.connect( process.env.MONGOLAB_URI ||
-          process.env.MONGOHQ_URL ||
+//mongoose.connect( process.env.MONGOLAB_URI ||
+  //        process.env.MONGOHQ_URL ||
           //******************************
           // REPLACE WITH LOCAL APP NAME *
-          "mongodb://localhost/REPLACE_ME");
+         // "mongodb://localhost/REPLACE_ME");
           //******************************
           //******************************
 
