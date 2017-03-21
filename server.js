@@ -3,6 +3,7 @@ var express = require('express'),
     app = express(),
     http = require('http').Server(app),
     bodyParser = require('body-parser'),
+    cookieParser = require('cookie-parser'),
     path = require('path'),
     db = require('./models'),
     request = require('request'),
@@ -14,6 +15,7 @@ app.set('view engine', 'ejs');
 app.use("/public", express.static("public"));
 app.use("/vendor", express.static("bower_components"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieParser());
 
 //TEST ENDPOINT
 app.get('/hw', ctrl.testF);
