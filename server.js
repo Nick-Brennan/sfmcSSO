@@ -13,10 +13,6 @@ var express = require('express'),
 *************|| then uncomment below ||*********************/
 var jwt = require('jwt-simple');
 
-
-
-var decodedJWT = jwt.decode(encodedJWT, sec
-
 app.set('view engine', 'ejs');
 
 app.use("/public", express.static("public"));
